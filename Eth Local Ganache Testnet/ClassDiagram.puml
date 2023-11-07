@@ -1,0 +1,25 @@
+@startuml
+
+class Layer1Bridge {
+    + receiveBatch(address[] _from, address[] _to, uint256[] _values)
+}
+
+class Layer2Sequencer {
+    - isLive: bool
+    - layer1BridgeContract: Layer1Bridge
+    - transactions: Transaction[]
+
+    + addTransaction(address _from, address _to, uint256 _value)
+    + publishBatch()
+    + shutDown()
+    + start()
+
+}
+
+class Layer2User {
+    + Transfer(address from, address to, uint256 value)
+}
+
+Layer2Sequencer --> Layer1Bridge
+
+@enduml
