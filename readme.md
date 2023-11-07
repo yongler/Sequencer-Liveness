@@ -20,5 +20,6 @@ To install and navigate this repository, follow the steps below:
 1. Clone the repository from GitHub
 2. Navigate to the project director
 3. Install the dependencies with `npm install` in the root directory.
-4. To run the demonstration, execute the following command in the root directory:
+4. Open Ganache software
+5. To run the demonstration, execute the following command in the root directory:
    `truffle test`
